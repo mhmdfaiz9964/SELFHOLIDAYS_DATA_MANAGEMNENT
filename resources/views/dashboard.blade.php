@@ -49,18 +49,18 @@
             </div>
 
             <!-- Stat Card 4 -->
-            <div class="group relative overflow-hidden rounded-[2rem] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/50 border border-slate-100">
+            <a href="{{ route('cheques.index') }}" class="group relative overflow-hidden rounded-[2rem] bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/50 border border-slate-100 block">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Pending Cheques</p>
-                        <h3 class="mt-2 text-3xl font-black text-slate-900">42</h3>
-                        <p class="mt-1 text-[11px] font-semibold text-slate-400">Requiring attention</p>
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-400">System Cheques</p>
+                        <h3 class="mt-2 text-3xl font-black text-slate-900">{{ \App\Models\Cheque::count() }}</h3>
+                        <p class="mt-1 text-[11px] font-semibold text-slate-400">Total records in repository</p>
                     </div>
                     <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-50 text-amber-500">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/><path d="M7 15h.01"/><path d="M11 15h2"/></svg>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
 
         <!-- Middle Section: Chart and Categories -->
